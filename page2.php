@@ -48,7 +48,8 @@ if (mysqli_num_rows($result) > 0) {
        // $link_address = '#';
        // echo $link;
         $pin = $row['pin'];
-        echo '<a href="page8.php?pin=$pin">'.$row['semail'].'</a>';
+        $semail = $row['semail'];
+        echo '<a href="page8.php?pin=$pin&semail=$semail">'.$row['semail'].'</a>';
 
     }
 } else {
