@@ -78,7 +78,8 @@ label {
 }
 
 input[type=text],
-input[type=password] {
+input[type=password], 
+input[type=date]{
  	width:100%;
   padding:8px 5px;
   background:linear-gradient(#1f2124, #27292c);
