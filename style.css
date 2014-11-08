@@ -112,6 +112,7 @@ input[type=text],
 input[type=password], 
 input[type=date]{
  	width:100%;
+  color: #fff;
   padding:8px 5px;
   background:linear-gradient(#1f2124, #27292c);
   border:1px solid #222;
