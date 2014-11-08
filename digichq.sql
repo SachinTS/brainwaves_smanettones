@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 08, 2014 at 03:54 PM
+-- Generation Time: Nov 08, 2014 at 09:14 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -104,6 +104,13 @@ CREATE TABLE IF NOT EXISTS `transaction` (
   PRIMARY KEY (`TId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `transaction`
+--
+
+INSERT INTO `transaction` (`accIdTr`, `TId`, `amount`, `semail`, `remail`, `pin`, `date`) VALUES
+('', '1', '560000', 'prasannasaraf180@hathway.com', 'nagaravali.t@gmail.com', '', '2014-05-05');
+
 -- --------------------------------------------------------
 
 --
@@ -136,7 +143,12 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`passwd`, `email`, `contact`, `name`, `place`) VALUES
+('deft', 'abc', '', '', ''),
 ('abc123', 'nagaravali.t@gmail.com', '9731915482', 'Ravali', 'Bangalore'),
+('890sachhi', 'prasannasaraf1800@hathway.com', '', '', ''),
+('890sachhi', 'prasannasaraf1801@hathway.com', '', '', ''),
+('890sachhi', 'prasannasaraf180@hathway.com', '', '', ''),
+('890sachhi', 'prasannasaraf18@hathway.com', '', '', ''),
 ('abc123', 'sachinjbms@gmail.com', '8904044057', 'Sachinj', 'Bangalore'),
 ('abc123', 'sachintshebbar@gmail.com', '8904044058', 'Sachin', 'Bangalore');
 
@@ -159,8 +171,8 @@ CREATE TABLE IF NOT EXISTS `userbank` (
 --
 
 INSERT INTO `userbank` (`email`, `string_id`, `bname`, `accIdTr`) VALUES
-('nagaravali.t@gmail.com', 'abcabc', 'hdfc', '1234'),
-('sachintshebbar@gmail.com', 'defdef', 'icici', '2345');
+('nagaravali.t@gmail.com', 'abcabc', 'bank1', '1234'),
+('sachintshebbar@gmail.com', 'defdef', 'bank2', '2345');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
