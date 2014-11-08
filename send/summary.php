@@ -11,8 +11,8 @@
     }
 
    echo "Amount transfered";
-   
-   $sql =  "select amount,remail,pin,date from transaction";
+   $bname = $_POST['bname'];
+   $sql =  "select amount,remail,pin,date from transaction where bname = '$bname'";
     $res = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($res);
     echo "DATE : ". $row['date'];
