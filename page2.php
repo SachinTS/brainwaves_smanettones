@@ -62,7 +62,7 @@ mysqli_close($conn);
 
 
 
- <form class="example2" action="">
+ <form class="example2" action="login.html">
  <input type="submit" name="logout" id="logout" value="LOGOUT" align="right">
  </form>
 
