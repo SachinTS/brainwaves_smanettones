@@ -11,16 +11,15 @@
     }
 
    echo "Amount transfered";
-   $bname = $_POST['bname'];
-   $sql =  "select amount,remail,pin,date from transaction where bname = '$bname'";
+   $bname = "bank1";
+  // $bname = $_POST['bname'];
+   $sql =  "select t.amount,t.remail,t.pin,t.date from transaction t,userbank u where t.accIdTr like u.accIdTr";
     $res = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($res);
     echo "DATE : ". $row['date'];
     echo "RECIPIENT EMAIL-ID :". $row['remail'];
     echo "PIN USED :". $row['pin'];
     echo "AMOUNT : ". $row['amount'];
-    $query = "select u.bname from userbank u,transaction t where t.accIdTr like u.accIdTr";
-     $res1 = mysqli_query($conn,$query);
-    $row1 = mysqli_fetch_assoc($res1);
-    echo "BANK NAME :" . $row1['bname'];
+   
+    echo "BANK NAME :" . $bname;
     ?>
