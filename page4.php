@@ -48,9 +48,11 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        $link =  $row["bname"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-        $link_address = '#';
-        echo '<a href="localhost/$row["bname"]">Link</a>';
+        $link =  $row["bname"];
+        $bob = $row["accIdTr"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+       // $link_address = '#';
+       // echo $link;
+        echo '<a href="localhost/summary.php?bname=$link&accIdTr=$bob">$Link</a>';
     }
 } else {
     echo "0 results";
