@@ -21,7 +21,7 @@
   </p>
   <p>
     <label for="email">USERID:</label>
-   
+   <?php echo $_POST['semail'];?>
   </p>
 
   </div>
