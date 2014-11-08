@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
     <meta charset="UTF-8" /> 
     <title>
         HTML Document Structure
@@ -33,7 +35,7 @@
 </head>
 <body>
 
-<form name="signup" onsubmit="return validateform()" action="Linking.php">
+<form name="signup" onsubmit="return validateform()" id = "login" >
   <h1>LOGIN</h1>
   <div class="inset">
   <p>
@@ -51,6 +53,27 @@
     <input type="submit" name="submit" id="submit" value="Login">
   </p>
 </form>
+<script >
+$("#submit").click( function(){
+    event.preventDefault(); 
 
+    var data = $("#login :input").serializeArray();
+    if (window.console) 
+      console.log(data);
+      // alert("hai");
+
+    $.post( "login.php", data , function(info){ 
+      if (window.console) console.log(info);
+      var annn = 1;
+      if(info == annn ){
+          //alert("");
+
+        window.location.replace("http://localhost/brainwaves_smanettones/page2.html");
+      }
+      //window.location.replace("http://localhost/brainwaves_smanettones/page2.html");
+      
+    });
+  });
+  </script>
 </body>
 </html>
