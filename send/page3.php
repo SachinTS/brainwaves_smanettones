@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<form name="signup" action="send/putData.php" method = "post">
+<form name="signup" action="putData.php">
   <h1>GENERATE CHEQUE</h1>
   <div class="inset">
   <p>
