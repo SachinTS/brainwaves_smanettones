@@ -38,18 +38,22 @@
     }
 
    //echo "Amount transfered";
-   
-   $bname = $_POST['bname'];
+   $bname= "bank1";
+   //$bname = $_POST['bname'];
     $sql =  "select t.amount,t.remail,t.pin,t.date from transaction t,userbank u where u.bname ='$bname' and t.accIdTr like u.accIdTr";
     $res = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($res);
-    echo "DATE : ". $row['date'];
-    echo "RECIPIENT EMAIL-ID :". $row['remail'];
-    echo "PIN USED :". $row['pin'];
-    echo "AMOUNT : ". $row['amount'];
+    echo "DATE : ". $row['date']; ?> <br /><br />
+    <?php
+    echo "RECIPIENT EMAIL-ID :". $row['remail']; ?> <br /><br />
+    <?php
+    echo "PIN USED :". $row['pin']; ?> <br /><br />
+    <?php
+    echo "AMOUNT : ". $row['amount']; ?> <br /><br />
+    <?php
    
-    echo "BANK NAME :" . $bname;
-    ?>
+    echo "BANK NAME :" . $bname; ?> <br /><br />
+    
     <input type="submit" name="submit" id="submit" value="NEXT">
   </p>
 </form>
