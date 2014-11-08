@@ -47,7 +47,7 @@ if (mysqli_num_rows($result) > 0) {
         //$bob = $row["accIdTr"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
        // $link_address = '#';
        // echo $link;
-        $pin = $row['pin'];
+        $_SESSION['simPin'] = $row['pin'];
         $_SESSION['sender_email']= $row['semail'];
         echo '<a href="page8.php?pin=$pin&semail=$semail">'.$row['semail'].'</a>';
 

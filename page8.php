@@ -12,17 +12,20 @@
 </head>
 <body>
 
-<form name="signup" onsubmit="" id = "login" >
+<form name="signup" action="page9.php" id = "login" >
   <h1>CLAIM</h1>
   <div class="inset">
   <p>
   <?php 
-  $pin = $_SESSION['pin']
-    <label for="pin">PIN:</label>
-    <input type="text" name="pin" id="pin">
+  //$pin = $_SESSION['pin'];
+  ?>
+
+    <label for='pin'>PIN:</label>
+    <input type='text' name='pin' id='pin'>
   </p>
   <p>
-    <label for="email">USERID:</label>
+    <label for='email'>USERID:</label>
+
    <?php
     session_start();
     echo $_SESSION['sender_email'];
