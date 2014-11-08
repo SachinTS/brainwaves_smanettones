@@ -36,7 +36,7 @@ form:before {
   width:8px;
   height:5px;
   border-radius:50%;
-  left:34%;
+  left:14%;
   top:-7px;
   box-shadow: 0 0 6px 4px #fff;
 }
@@ -118,6 +118,8 @@ input[type=checkbox] {
   color:#0d93ff;
   padding-top:8px;
 }
+
+
 
 input[type=submit] {
  	padding:5px 20px;
