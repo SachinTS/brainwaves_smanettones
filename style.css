@@ -17,6 +17,37 @@ form {
   position:relative;
   box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
 }
+.example{
+	background:#111; 
+  width:190px;
+  margin:30px auto;
+  border-radius:0.4em;
+  border:1px solid #191919;
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+.example1{
+	background:#111; 
+  width:165px;
+  margin:30px auto;
+  border-radius:0.4em;
+  border:1px solid #191919;
+  overflow:hidden;
+  position:relative;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
+.example2{
+	background:#111; 
+  width:100px;
+  margin:30px auto;
+  border-radius:0.4em;
+  border:1px solid #191919;
+  overflow:hidden;
+  position:relative;
+  text-align:right;
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);
+}
 
 form:after {
   content:"";
@@ -123,7 +154,7 @@ input[type=checkbox] {
 
 input[type=submit] {
  	padding:5px 20px;
-  border:1px solid rgba(0,0,0,0.4);
+ border:1px solid rgba(0,0,0,0.4);
   text-shadow:0 -1px 0 rgba(0,0,0,0.4);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,0.3),
