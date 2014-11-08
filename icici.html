@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8" /> 
+    <title>
+        ICICI
+    </title>
+   <script type="text/javascript">
+  function validateform()
+  {
+  //alert("hai");
+    var signup=document.forms[0];
+    var username=signup.username;
+    var password=signup.password;
+    
+    if(username.value.length==0 || password.value.length==0)
+    {
+      alert("Please fill the required details");
+      username.focus();
+      return false;
+    }
+    
+    }
+</script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<form name="signup" onsubmit="return validateform()" action="Linking.php">
+  <h1>ICICI</h1>
+  <div class="inset">
+  <p>
+    <label for="username">USERNAME</label>
+    <input type="text" name="username" id="email">
+  </p>
+  <p>
+    <label for="password">PASSWORD</label>
+    <input type="password" name="password" id="password">
+  </p>
+ 
+    <input type="submit" name="submit" id="submit" value="OK">
+  </p>
+</form>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <meta charset="UTF-8" /> 
     <title>
         HTML Document Structure
@@ -8,7 +9,6 @@
    <script type="text/javascript">
   function validateform()
   {
-  alert("hai");
     var signup=document.forms[0];
     var username=signup.username;
     var password=signup.password;
@@ -16,7 +16,7 @@
     var remember=signup.remember;
     var mailformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     //alert("hai");
-    alert(username.value);
+    //alert(username.value);
     if(username.value.length==0 || password.value.length==0 || cpassword.value.length==0 || remember.value.length==0)
     {
       alert("Please fill the required details");
@@ -41,7 +41,7 @@
 </head>
 <body>
 
-<form name="signup" onsubmit="return validateform()" action="Linking.php">
+<form name="signup" onsubmit="return validateform()" id = "login">
   <h1>SIGN UP</h1>
   <div class="inset">
   <p>
@@ -66,6 +66,26 @@
     <input type="submit" name="submit" id="submit" value="Sign up">
   </p>
 </form>
+<script >
+$("#submit").click( function(){
+    event.preventDefault(); 
 
+    var data = $("#login :input").serializeArray();
+    if (window.console) 
+      console.log(data);
+      // alert("hai");
+
+    $.post( "signup.php", data , function(info){ 
+      if (window.console) console.log(info);
+      if(info == "1"){
+          //alert("");
+
+        window.location.replace("http://localhost/brainwaves_smanettones/login.html");
+      }
+      window.location.replace("http://localhost/brainwaves_smanettones/login.html");
+      
+    });
+  });
+  </script>
 </body>
 </html>
