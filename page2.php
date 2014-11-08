@@ -37,8 +37,8 @@
    // echo "successful connection";
 
     }
-    $email = $_SESSION['semail'];
-    $sql = "SELECT * FROM transaction where remail = '$email'";
+    $email = "nagaravali.t@gmail.com";//$_SESSION['semail'];
+    $sql = "SELECT * FROM transaction tr, Tstatus t where remail = '$email'";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
