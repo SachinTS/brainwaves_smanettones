@@ -16,9 +16,9 @@
     $remail = $_POST['remail'];
     $amount = $_POST['amount'];
     $semail = $_SESSION['semail'];
-    $_SESSION['tid'] = 1;
+    $_SESSION['tid'] = $_SESSION['tid'] + 1;
     $tid = $_SESSION['tid'];
-    $query = "select accIdTr from userbank where semail = '$semail' ";
+   /* $query = "select accIdTr from userbank where semail = '$semail' ";
     if (mysqli_query($conn, $query)) {
   //  echo "New record created successfully";
 } else {
@@ -28,8 +28,8 @@
 
     $row = mysqli_fetch_array($res,MYSQLI_NUM);
     $acc = $row['accIdTr'];
-
-       $sql = "INSERT INTO transaction VALUES ('$acc','$tid','$amount','$semail','$remail','$pin','$date')";
+*/
+       $sql = "INSERT INTO transaction(TId,amount,semail,remail,pin,date) VALUES ($tid','$amount','$semail','$remail','$pin','$date')";
 
 if (mysqli_query($conn, $sql)) {
    // echo "New record created successfully";
@@ -93,7 +93,7 @@ if (mysqli_num_rows($result) > 0) {
         $bob = $row["accIdTr"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
        // $link_address = '#';
        // echo $link;
-        $query = "select balance from (select bname from userbank where bname = '$bname')";
+        $query = "select balance from '. $bname.' where semail= $email";
         $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
 
