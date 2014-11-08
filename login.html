@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8" /> 
+    <title>
+        HTML Document Structure
+    </title>
+    <script type="text/javascript">
+  function validateform()
+  {
+    var signup=document.forms[0];
+    var username=signup.username;
+    var password=signup.password;
+    var remember=signup.remember;
+    var mailformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //alert("hai");
+    alert(username.value);
+    if(username.value.length==0 || password.value.length==0  || remember.value.length==0)
+    {
+      alert("Please fill the required details");
+      username.focus();
+      return false;
+    }
+    if(!username.value.match(mailformat))
+    {
+      alert("Inavalid username");
+      username.focus();
+      return false;
+    }
+   }
+</script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<form name="signup" onsubmit="return validateform()" action="Linking.php">
+  <h1>LOGIN</h1>
+  <div class="inset">
+  <p>
+    <label for="email">EMAIL ADDRESS</label>
+    <input type="text" name="email" id="email">
+  </p>
+  <p>
+    <label for="password">PASSWORD</label>
+    <input type="password" name="password" id="password">
+  </p>
+
+  </div>
+  <p class="p-container">
+    <span>Forgot password ?</span>
+    <input type="submit" name="submit" id="submit" value="Login">
+  </p>
+</form>
+
+</body>
+</html>
