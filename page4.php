@@ -12,10 +12,10 @@
     }
 
     $date = $_POST['date'];
-    $pin = $_POST['pin'];
+    $pin = $_SESSION['pin'];
     $remail = $_POST['remail'];
     $amount = $_POST['amount'];
-    $semail = $_SESSION["semail"];
+    $semail = $_SESSION['semail'];
     $_SESSION['tid'] = 1;
     $tid = $_SESSION['tid'];
     $query = "select accIdTr from userbank where semail = '$semail' ";
@@ -93,9 +93,14 @@ if (mysqli_num_rows($result) > 0) {
         $bob = $row["accIdTr"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
        // $link_address = '#';
        // echo $link;
-        echo '<a href="summary.php?bname=$link&accIdTr=$bob">'.$link.'</a>';
+        $query = "select balance from (select bname from userbank where bname = '$bname')";
+        $result = mysqli_query($conn, $query);
+        $row = mysqli_fetch_assoc($result);
 
-    }
+        echo '<a href="summary.php?bname=$link&accIdTr=$bob">'.$link.'</a>';
+        echo "     ". $row[balance];
+
+      }
 } else {
     echo "0 results";
 }

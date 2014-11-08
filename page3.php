@@ -18,9 +18,16 @@
     <input type="date" name="date" id="date">
   </p>
   <p>
+    <?php
+      session_start();
+         $_SESSION['pin'] = rand();
+         $pin = $_SESSION['pin'];
+      ?>
+
     <label for="pin">PIN : </label>
-    <input type="button" name="pin" id="pin" value = " <?php echo rand() ?> " />
+    <input class="ex1" type="button" name="pin" id="pin" value = " <?php echo $pin  ?> " disabled />
   </p>
+
   <p>
     <label for="remail">RECEIVER ID : </label>
     <input type="text" name="remail" id="remail">
@@ -35,7 +42,7 @@
   
   <p class="p-container">
     
-    <input type="submit" name="submit" id="submit" value="Generate">
+    <input type="submit" name="submit" id="submit" value="NEXT">
   </p>
 </form>
 

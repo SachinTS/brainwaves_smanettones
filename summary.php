@@ -38,9 +38,26 @@
     }
 
    //echo "Amount transfered";
-   $bname= "bank1";
-   //$bname = $_POST['bname'];
-    $sql =  "select t.amount,t.remail,t.pin,t.date from transaction t,userbank u where u.bname ='$bname' and t.accIdTr like u.accIdTr";
+
+   $semail = $_SESSION['semail'];
+
+   $bname = $_SESSION['bname'];
+
+   $pin = $_SESSION['pin'];
+
+   $sql1 = "select accIdTr from userbank where bname=$bname and email=$semail";
+
+   $res1=mysqli_query($conn,$sql1);
+
+   $row1 = mysqli_fetch_assoc($res1);
+
+   $acc = $row1['accIdTr'];
+
+   $query = "insert into transaction(accIdTr) values('$acc') where pin = '$pin'";
+   
+   $res2 = mysqli_query($conn,$query);
+
+       $sql =  "select t.amount,t.remail,t.pin,t.date from transaction t,userbank u where u.bname ='$bname' and t.accIdTr like u.accIdTr";
     $res = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($res);
     echo "DATE : ". $row['date']; ?> <br /><br />
@@ -50,6 +67,7 @@
     echo "PIN USED :". $row['pin']; ?> <br /><br />
     <?php
     echo "AMOUNT : ". $row['amount']; ?> <br /><br />
+
     <?php
    
     echo "BANK NAME :" . $bname; ?> <br /><br />
