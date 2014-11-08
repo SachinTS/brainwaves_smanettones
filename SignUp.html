@@ -44,15 +44,29 @@
 </head>
 <body>
 
-<form name="signup" onsubmit="return validateform()" action="Linking.php">
+<form name="signup" onsubmit="return validateform()" action="Linking.php" id= "login">
 	<div>
 		<label>USERNAME:<input type="text" name="username" placeholder="example@mail.com"></label><br/><br/>
 		<label>PASSWORD:<input type="password" name="password" placeholder="password"></label><br/><br/>
 		<label>CONFIRM PASSWORD:<input type="password" name="cpassword" placeholder="password"></label><br/><br/>
-		<label><input type="submit" value="submit"></label><br/><br/>
+		<label><input type="submit" value="submit" id ="sub"></label><br/><br/>
 	</div>
 	
 </form>
-
+<script type="text/javascript">
+$("#sub").click( function(){
+		event.preventDefault(); 
+		var data = $("#login :input").serializeArray();
+		if (window.console) console.log(data);
+		 
+		$.post( "signup.php", data , function(info){ 
+			if (window.console) console.log(info);
+			if(info == "1"){
+				window.location.replace("http://localhost/brainwaves_smanettones/login.html");
+			}
+		}
+	}
+	
+	</script>
 </body>
 </html>
