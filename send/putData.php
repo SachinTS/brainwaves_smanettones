@@ -36,4 +36,5 @@ if (mysqli_query($conn, $sql)) {
 } else {
    // echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+header("Location: http://localhost/brainwaves_smanettones/page4.php");
   ?>
