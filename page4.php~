@@ -53,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
         $bob = $row["accIdTr"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
        // $link_address = '#';
        // echo $link;
-        echo '<a href="summary.php?bname=$link&accIdTr=$bob">'.$link.'</a>';
+        echo '<a href="localhost/summary.php?bname=$link&accIdTr=$bob">'.$link.'</a>';
 
     }
 } else {
