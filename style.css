@@ -174,6 +174,23 @@ input[type=submit]:hover {
     inset 0 -10px 10px rgba(255,255,255,0.1);
 }
 
+.button
+{
+    padding:5px 20px;
+ border:1px solid rgba(0,0,0,0.4);
+  text-shadow:0 -1px 0 rgba(0,0,0,0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    inset 0 10px 10px rgba(255,255,255,0.1);
+  border-radius:0.3em;
+  background:#0184ff;
+  color:white;
+  float:right;
+  font-weight:bold;
+  cursor:pointer;
+  font-size:13px; 
+}
+
 input[type=text]:hover,
 input[type=password]:hover,
 label:hover ~ input[type=text],
