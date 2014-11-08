@@ -43,7 +43,7 @@ if (!$conn) {
     
 <?php
 //session_start();
-$sql = "SELECT * FROM userbank where email = 'nagaravali.t@gmail.com'";
+$sql = "SELECT * FROM userbank where email = $_SESSION['semail']";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
@@ -53,6 +53,7 @@ if (mysqli_num_rows($result) > 0) {
        // $link_address = '#';
        // echo $link;
         echo '<a href="localhost/summary.php?bname=$link&accIdTr=$bob">$Link</a>';
+        
     }
 } else {
     echo "0 results";
