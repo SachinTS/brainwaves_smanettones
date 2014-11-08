@@ -12,10 +12,10 @@
     }
 
     $date = $_POST['date'];
-    $pin = $_POST['pin'];
+    $pin = $_SESSION['pin'];
     $remail = $_POST['remail'];
     $amount = $_POST['amount'];
-    $semail = $_SESSION["semail"];
+    $semail = $_SESSION['semail'];
     $_SESSION['tid'] = 1;
     $tid = $_SESSION['tid'];
     $query = "select accIdTr from userbank where semail = '$semail' ";
