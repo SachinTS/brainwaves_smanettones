@@ -54,7 +54,7 @@ echo 'Message has been sent';
    else
    {
       //echo "Message could not be sent...";
-   }header('Location: page2.php');
+   }header('Location: index.html');
 exit;
 
 ?>

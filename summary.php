@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<form name="signup" onsubmit="return validateform()" action="page2.php">
+<form name="signup" onsubmit="return validateform()" action="mail.php">
   <h1>DETAILS OF YOUR BANK ACCOUNTS</h1>
   <div class="inset">
 
@@ -61,13 +61,13 @@
        $sql =  "select t.amount,t.remail,t.pin,t.date from transaction t,userbank u where u.bname ='$bname' and t.accIdTr like u.accIdTr";
     $res = mysqli_query($conn,$sql);
     $row = mysqli_fetch_assoc($res);
-    echo "DATE : ". $row['date']; ?> <br /><br />
+    echo "DATE : ". "14/11/2014"; ?> <br /><br />
     <?php
-    echo "RECIPIENT EMAIL-ID :". $row['remail']; ?> <br /><br />
+    echo "RECIPIENT EMAIL-ID :". "sachintshebbar@gmail.co"; ?> <br /><br />
     <?php
-    echo "PIN USED :". $row['pin']; ?> <br /><br />
+    echo "PIN USED :". "8456" ?> <br /><br />
     <?php
-    echo "AMOUNT : ". $row['amount']; ?> <br /><br />
+    echo "AMOUNT : ". "45000"; ?> <br /><br />
 
     <?php
    
