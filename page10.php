@@ -86,7 +86,7 @@ if (mysqli_num_rows($result) > 0) {
        // $result = mysqli_query($conn, $query);
        // $row = mysqli_fetch_assoc($result);
 
-        echo '<a href="summary.php?bname='.$link.'&accIdTr='.$bob.'">'.$link.'</a>';
+        echo '<a href="summary1.php?bname='.$link.'&accIdTr='.$bob.'">'.$link.'</a>';
        //echo "     ". $row[balance];
         echo  "</br>";
       }

@@ -63,7 +63,7 @@
     $row = mysqli_fetch_assoc($res);
     echo "DATE : ". "14/11/2014"; ?> <br /><br />
     <?php
-    echo "RECIPIENT EMAIL-ID :". "sachintshebbar@gmail.com"; ?> <br /><br />
+    echo "RECIPIENT EMAIL-ID :". "nagaravali.t@gmail.co"; ?> <br /><br />
     <?php
     echo "PIN USED :". "8456" ?> <br /><br />
     <?php
