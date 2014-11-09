@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 08, 2014 at 09:14 PM
+-- Generation Time: Nov 09, 2014 at 01:23 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -62,8 +62,10 @@ CREATE TABLE IF NOT EXISTS `bank2` (
 --
 
 INSERT INTO `bank2` (`acc_no`, `string_id`, `balance`, `branch_id`) VALUES
+('123456789', 'wert', 456789, 'fdgjwH'),
 ('876543219', 'ghighi', 908766, '4444'),
-('987654321', 'xyzxyz', 66000, '3333');
+('987654321', 'xyzxyz', 66000, '3333'),
+('jh564', 'ghty', 456879, 'hjdskqio');
 
 -- --------------------------------------------------------
 
@@ -109,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `transaction` (
 --
 
 INSERT INTO `transaction` (`accIdTr`, `TId`, `amount`, `semail`, `remail`, `pin`, `date`) VALUES
-('', '1', '560000', 'prasannasaraf180@hathway.com', 'nagaravali.t@gmail.com', '', '2014-05-05');
+('1234', '1', '560000', 'nagaravali.t@gmail.com', 'sachintshebbar@gmail.com', '123', '2014-05-05');
 
 -- --------------------------------------------------------
 
@@ -122,6 +124,13 @@ CREATE TABLE IF NOT EXISTS `Tstatus` (
   `status` int(2) NOT NULL,
   PRIMARY KEY (`TId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Tstatus`
+--
+
+INSERT INTO `Tstatus` (`TId`, `status`) VALUES
+('1', 0);
 
 -- --------------------------------------------------------
 
@@ -172,7 +181,11 @@ CREATE TABLE IF NOT EXISTS `userbank` (
 
 INSERT INTO `userbank` (`email`, `string_id`, `bname`, `accIdTr`) VALUES
 ('nagaravali.t@gmail.com', 'abcabc', 'bank1', '1234'),
-('sachintshebbar@gmail.com', 'defdef', 'bank2', '2345');
+('nagaravali.t@gmail.com', 'wert', 'bank2', '12345'),
+('sachintshebbar@gmail.com', 'defdef', 'bank2', '2345'),
+('sachintshebbar@gmail.com', 'kjiu', 'bank1', 'asdfg'),
+('nagaravali.t@gmail.com', 'ghty', 'bank3', 'hfsjka'),
+('sachintshebbar@gmail.com', 'ghjj', 'bank3', 'hjkl');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
