@@ -78,17 +78,17 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        $link =  $row["bname"];
-        $bob = $row["accIdTr"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+        $link =  $row['bname'];
+        $bob = $row['accIdTr'];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
        // $link_address = '#';
        // echo $link;
-        $query = "select balance from '. $bname.' where semail= $email";
-        $result = mysqli_query($conn, $query);
-        $row = mysqli_fetch_assoc($result);
+        //$query = "select balance from '. $bname.' where semail= $email";
+       // $result = mysqli_query($conn, $query);
+       // $row = mysqli_fetch_assoc($result);
 
-        echo '<a href="summary.php?bname=$link&accIdTr=$bob">'.$link.'</a>';
-        echo "     ". $row[balance];
-
+        echo '<a href="summary.php?bname='.$link.'&accIdTr='.$bob.'">'.$link.'</a>';
+       //echo "     ". $row[balance];
+        echo  "</br>";
       }
 } else {
     echo "0 results";

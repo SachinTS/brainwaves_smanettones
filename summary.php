@@ -22,9 +22,10 @@
 </head>
 <body>
 
-<form name="signup" onsubmit="return validateform()" action="page2.html">
+<form name="signup" onsubmit="return validateform()" action="page2.php">
   <h1>DETAILS OF YOUR BANK ACCOUNTS</h1>
   <div class="inset">
+
   <?php
 	session_start();
 	$conn = mysqli_connect("localhost","root","","digichq");
@@ -41,11 +42,11 @@
 
    $semail = $_SESSION['semail'];
 
-   $bname = $_POST['bname'];
+   $bname = $_SESSION['bname'];
 
-   $pin = $_POST['pin'];
+   $pin = $_SESSION['pin'];
 
-   $sql1 = "select accIdTr from userbank where bname=$bname and email=$semail";
+   $sql1 = "select accIdTr from userbank where bname='$bname' and email='$semail'";
 
    $res1=mysqli_query($conn,$sql1);
 
