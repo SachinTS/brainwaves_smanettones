@@ -41,9 +41,9 @@
 
    $semail = $_SESSION['semail'];
 
-   $bname = $_SESSION['bname'];
+   $bname = $_POST['bname'];
 
-   $pin = $_SESSION['pin'];
+   $pin = $_POST['pin'];
 
    $sql1 = "select accIdTr from userbank where bname=$bname and email=$semail";
 

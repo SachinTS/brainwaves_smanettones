@@ -93,12 +93,13 @@ if (mysqli_num_rows($result) > 0) {
         $bob = $row["accIdTr"];//. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
        // $link_address = '#';
        // echo $link;
-        $query = "select balance from '. $bname.' where semail= $email";
-        $result = mysqli_query($conn, $query);
+       // $query = "select balance from '. $bname.' where semail= '$email'";
+       // $result = mysqli_query($conn, $query);
         $row = mysqli_fetch_assoc($result);
 
-        echo '<a href="summary.php?bname=$link&accIdTr=$bob">'.$link.'</a>';
-        echo "     ". $row[balance];
+        echo '<a href="summary.php?bname='.$link.'&accIdTr'.$bob.'">'.$link.'</a>';
+        echo '</br>';
+        //echo "     ". $row[balance];
 
       }
 } else {

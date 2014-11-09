@@ -15,7 +15,7 @@
  
   <h1 align="center">TRANSACTIONS</h1>
 
-  <form class="example" action="page3.html">
+  <form class="example" action="page3.php">
   
   <!--label for="transfer">Click here to transfer money</label-->
   <input type="submit" name="transfer" id="transfer" value="TRANSFER MONEY"><br/><br/>
