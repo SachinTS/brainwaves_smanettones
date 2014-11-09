@@ -49,7 +49,7 @@ if (mysqli_num_rows($result) > 0) {
        // echo $link;
         $_SESSION['simPin'] = $row['pin'];
         $_SESSION['sender_email']= $row['semail'];
-        echo '<a href="page8.php?pin=$pin&semail=$semail">'.$row['semail'].'</a>';
+        echo '<a href="page8.php?pin=$pin&semail=$semail" class="button">'.$row['semail'].'</a>';
 
     }
 } else {
